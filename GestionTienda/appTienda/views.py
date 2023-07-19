@@ -12,7 +12,7 @@ class CategoriaDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Categoria.objects.all()
     serializer_class = Categoriaserializer
 
-class ProductoList(generics.ListCreateAPIVien) :
+class ProductoList(generics.ListCreateAPIView) :
     queryset = Producto.objects.all()
     serializer_class = Productoserializer
 
