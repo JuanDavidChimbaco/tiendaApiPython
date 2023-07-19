@@ -79,10 +79,20 @@ WSGI_APPLICATION = 'GestionTienda.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+DATABASES_SQLite = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'gestionTienda.db',
+    }
+}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gestionTienda',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
