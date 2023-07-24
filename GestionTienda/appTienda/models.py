@@ -5,11 +5,7 @@ from django.db import models
 class Categoria(models.Model):
     catNombre = models.CharField(max_length=50)
 
-    catFoto = models.FileField(upload_to="fotos/")
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def _str_ (self):
+    def __str__ (self):
         return self.catNombre
 
 class Producto(models.Model):
@@ -17,10 +13,7 @@ class Producto(models.Model):
     proNombre =models.CharField(max_length=50,null=False)
     proPrecio = models.IntegerField(null=False)
     proCategoria = models.ForeignKey (Categoria, on_delete=models.PROTECT)
-    proFoto = models.FileField(upload_to="fotos/")
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
-    def _str_ (self):
+    def __str__ (self):
         return self.proNombre
     
