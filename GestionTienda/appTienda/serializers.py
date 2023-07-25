@@ -4,7 +4,7 @@ from appTienda.models import Categoria,Producto
 class Categoriaserializer(serializers.ModelSerializer):
     class Meta:
         model = Categoria
-        fields = '__all__'
+        fields = ('id','catNombre')
 
 class Productoserializer(serializers.ModelSerializer):
     class Meta:

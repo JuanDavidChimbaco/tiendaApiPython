@@ -19,3 +19,10 @@ class ProductoList(generics.ListCreateAPIView) :
 class ProductoDetail(generics.RetrieveUpdateDestroyAPIView) :
     queryset = Producto.objects.all()
     serializer_class = Productoserializer
+
+class ProductoPorCodigo(generics.RetrieveAPIView):
+    serializer_class = Productoserializer
+
+    def get_object(self):
+        codigo = self.kwargs['codigo']
+        return Producto.objects.get(proCodigo=codigo)

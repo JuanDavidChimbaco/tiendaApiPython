@@ -10,7 +10,7 @@ class Categoria(models.Model):
 
 class Producto(models.Model):
     proCodigo = models.IntegerField(unique=True, null=False)
-    proNombre =models.CharField(max_length=50,null=False)
+    proNombre = models.CharField(max_length=50,null=False)
     proPrecio = models.IntegerField(null=False)
     proCategoria = models.ForeignKey (Categoria, on_delete=models.PROTECT)
 
