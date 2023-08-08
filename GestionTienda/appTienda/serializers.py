@@ -11,4 +11,4 @@ class Productoserializer(serializers.ModelSerializer):
     proFoto = Base64ImageField(required=False)
     class Meta:
         model = Producto
-        fields = '__all__'
+        fields = ('id','proCodigo','proNombre','proPrecio','proCategoria','proFoto')
