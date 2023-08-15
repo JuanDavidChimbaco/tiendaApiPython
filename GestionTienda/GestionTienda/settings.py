@@ -143,4 +143,5 @@ ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8081',
+    'http://localhost:4200',
 )
