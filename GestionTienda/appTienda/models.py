@@ -15,7 +15,7 @@ class Producto(models.Model):
     proNombre = models.CharField(max_length=50,null=False)
     proPrecio = models.IntegerField(null=False)
     proCategoria = models.ForeignKey (Categoria, on_delete=models.PROTECT)
-    proFoto = models.FileField(upload_to='fotos/', null=True)
+    proFoto = models.FileField(upload_to='fotos/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
